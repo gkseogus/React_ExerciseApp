@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import { Provider } from 'react-redux';
-import { Store } from 'redux';
 import { History } from 'history';
 import { ConnectedRouter } from 'connected-react-router';
 import Routes from './routes';
