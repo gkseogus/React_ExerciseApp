@@ -5,7 +5,7 @@ This Application is a boilerplate for Type Safe redux Applications. React + Redu
 
 # 리액트를 사용한 나만의 운동 정보 사이트
 
-## 1. 메뉴바 생성 (홈, 루틴, 운동브금 등등..)
+### 1. 운동일지 기능 구현
 
 
 ## Setup
