@@ -14,12 +14,12 @@ const Navbar = () => {
       position: 'fixed', 
       zIndex: 1, 
       width: '100%',
-      background:'black' ,
+      background:'linear-gradient(to right top, #94eb09, #000000)' ,
       }}>
       <div className="logo" />
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}
         style={{
-          background: 'black',
+          background: 'linear-gradient(to right top, #94eb09, #000000)',
         }}
       >
         <Menu.Item key="1"
