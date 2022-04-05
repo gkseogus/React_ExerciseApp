@@ -1,19 +1,27 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Breadcrumb, Layout } from 'antd';
+import styled from 'styled-components';
 
-const { Content } = Layout;
+const Constain = styled.div`
+  padding: 1em;
+`
+const FirstFont = styled.h1`
+  position: static;
+  font-size: 100px;
+  text-align: center;
+  background: linear-gradient(to right top, #000000, #94eb09);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-family: 'Rubik Glitch', cursive;
+`
 
 const HomePage = () => {
   return (
-    <div>
-      <Content style={{ padding: '0 50px' }}>
-      <Breadcrumb style={{ margin: '16px 0' }}>
-        운동하죠
-      </Breadcrumb>
-      <div className="site-layout-content">그러죠 </div>
-    </Content>
-    </div>
+    <Constain>  
+      <FirstFont>
+        Exercise Blog
+      </FirstFont>
+    </Constain>
   );
 };
 
