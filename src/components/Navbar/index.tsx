@@ -1,48 +1,71 @@
 import React from 'react';
-import 'antd/dist/antd.css';
-import { Layout, Menu } from 'antd';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import styled from 'styled-components';
 
-const MenuFont = styled.h1`
- font-family: 'Rubik Bubbles', cursive;
- padding: -5px;
+const TitleFont = styled.h6`
+  color: white;
+  position: static;
+  padding: 10px;
+    background: linear-gradient(to right top, #000000, #94eb09);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-family: 'Rubik Glitch', cursive;
 `
 
-const { Header, Footer } = Layout;
+const NavbarFont = styled.h6`
+  color: white;
+  position: static;
+`
 
-const Navbar = () => {
+const Navbar1 = () => {
 
 
   return (
-    <Layout className='layout'>
-    <Header style={{ 
-      position: 'fixed', 
-      zIndex: 1, 
-      width: '100%',
-      background:'linear-gradient(to right top, #94eb09, #000000)',
-      height: '74.5px'
+<Navbar bg="black" expand="lg">
+  <Container>
+    <Navbar.Brand href="#home">
+      <img
+            alt=""
+            src="/gym.svg"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+      />
+    </Navbar.Brand>
+    <TitleFont>
+          HDH Exercise Blog
+    </TitleFont>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="me-auto" style={{
+        padding: '20px'
       }}>
-      <div className='logo' />
-      <Menu theme='dark' mode='horizontal' defaultSelectedKeys={['2']}
-        style={{
-          background: 'linear-gradient(to right top, #94eb09, #000000)',
-        }}
-      >
-        <Menu.Item key='1'>
-          <MenuFont>
+        <Nav.Link href="#home">
+          <NavbarFont>
             Home
-          </MenuFont>
-        </Menu.Item>
-        <Menu.Item key='2'>
-          <MenuFont>
-            Routine
-          </MenuFont>
-        </Menu.Item>
-      </Menu>
-    </Header>
-    <Footer style={{ textAlign: 'center' }}>운동 사이트</Footer>
-  </Layout>
+          </NavbarFont>
+        </Nav.Link>
+        <Nav.Link href="#link">
+          <NavbarFont>
+            Link
+          </NavbarFont>
+        </Nav.Link>
+        <NavDropdown title={
+          <NavbarFont>
+            dropdown
+          </NavbarFont>
+        } id="basic-nav-dropdown">
+          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        </NavDropdown>
+      </Nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
   );
 };
 
-export default React.memo(Navbar);
+export default React.memo(Navbar1);
