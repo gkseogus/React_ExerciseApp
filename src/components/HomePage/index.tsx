@@ -4,7 +4,10 @@ import styled from 'styled-components';
 
 const Constain = styled.div`
   padding: 1em;
+  background: black;
+  height: 100vh;
 `
+
 const FirstFont = styled.h1`
   position: static;
   font-size: 100px;
