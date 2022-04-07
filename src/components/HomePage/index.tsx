@@ -1,11 +1,19 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
+import Cards from '../Cards';
 
 const Constain = styled.div`
   padding: 1em;
   background: black;
   height: 100vh;
+`
+
+const ListConstain = styled.li`
+  text-align: center;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 const FirstFont = styled.h1`
@@ -24,6 +32,9 @@ const HomePage = () => {
       <FirstFont>
         Exercise Blog
       </FirstFont>
+      <ListConstain>
+        <Cards/>
+      </ListConstain>
     </Constain>
   );
 };
