@@ -26,7 +26,7 @@ const Navbar1 = () => {
     <Navbar.Brand href="#home">
       <img
             alt=""
-            src="/gym.svg"
+            src="/Image/gym.svg"
             width="30"
             height="30"
             className="d-inline-block align-top"
@@ -52,12 +52,12 @@ const Navbar1 = () => {
         </Nav.Link>
         <NavDropdown title={
           <NavbarFont>
-            dropdown
+            BGM
           </NavbarFont>
         } id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+          <NavDropdown.Item href="#bgm/pop">POP</NavDropdown.Item>
+          <NavDropdown.Item href="#bgm/kpop">KPOP</NavDropdown.Item>
+          <NavDropdown.Item href="#bgm/clup">CLUP</NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
         </NavDropdown>
