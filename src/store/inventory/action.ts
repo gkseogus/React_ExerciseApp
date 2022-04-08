@@ -1,4 +1,4 @@
-import { FETCH_ERROR,FETCH_SUCCESS, FETCH_UPDATE } from './types';
+import { FETCH_ERROR,FETCH_SUCCESS } from './types';
 
 import { ActionCreator, Action, Dispatch } from 'redux';
 import { ThunkAction } from 'redux-thunk';
@@ -19,21 +19,6 @@ export const fetchRequest: AppThunk = (item) => {
     try {
       return dispatch({ 
         type: FETCH_SUCCESS,
-        payload: item 
-      });
-    } catch (e) { 
-      return dispatch({
-        type: FETCH_ERROR
-      });
-    }
-  };
-};
-
-export const fetchRequestToUpdate: AppThunk = (item) => {
-  return (dispatch: Dispatch): Action => {
-    try {
-      return dispatch({ 
-        type: FETCH_UPDATE,
         payload: item 
       });
     } catch (e) { 
