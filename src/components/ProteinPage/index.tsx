@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
 import styled from 'styled-components';
-import Proteins from '../Proteins';
+import ProteinItems from '../ProteinItems';
 
 
 const Constain = styled.div`
@@ -43,7 +43,7 @@ const ProteinPage = () => {
                     }} />
             </Space>
         </ProteinForm>
-        <Proteins/>
+        <ProteinItems/>
     </Constain>
   );
 };
