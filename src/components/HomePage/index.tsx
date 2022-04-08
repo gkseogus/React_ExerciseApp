@@ -1,5 +1,4 @@
 import React from 'react';
-import 'antd/dist/antd.css';
 import styled from 'styled-components';
 import Cards from '../Cards';
 
