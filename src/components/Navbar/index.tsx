@@ -23,7 +23,7 @@ const Navbar1 = () => {
   return (
 <Navbar bg="black" expand="lg">
   <Container>
-    <Navbar.Brand href="#home">
+    <Navbar.Brand href="/">
       <img
             alt=""
             src="/Image/gym.svg"
@@ -40,12 +40,12 @@ const Navbar1 = () => {
       <Nav className="me-auto" style={{
         padding: '20px'
       }}>
-        <Nav.Link href="#home">
+        <Nav.Link href="/">
           <NavbarFont>
             Home
           </NavbarFont>
         </Nav.Link>
-        <Nav.Link href="#link">
+        <Nav.Link href="link">
           <NavbarFont>
             Link
           </NavbarFont>
