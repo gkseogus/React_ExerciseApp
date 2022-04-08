@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
 import styled from 'styled-components';
 import ProteinItems from '../ProteinItems';
+import { fetchRequest } from '../../store/inventory/action';
+import { useDispatch } from 'react-redux';
 
 
 const Constain = styled.div`
@@ -27,8 +29,30 @@ const ProteinForm = styled.div`
 `
 const { Search } = Input;
 
-const ProteinPage = () => {
+const ProteinPage = (itme: any) => {
   const [name, setName] = useState('');
+  const dispatch = useDispatch();
+
+  const getData = async () => {
+    try {
+      const res = await fetch(
+        `https://api.apispreadsheets.com/data/BExLWJZUR6WWSFGu/`
+        ).then(res=>{
+          if(res.status == 200){
+            res.json().then(data=>{
+              const apiData = data
+              dispatch(fetchRequest(apiData));
+            }).catch(err => console.log(err))
+          }
+        });
+    } catch (err) {
+      console.log('error:', err);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  })
 
   return (
     <Constain>  
