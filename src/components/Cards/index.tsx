@@ -17,7 +17,7 @@ const Cards = () => {
                     <Card.Text>
                         운동 기구 종류 및 사용 방법
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary" href='weight'>Click here</Button>
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem', margin: '1em' }}>
@@ -27,7 +27,7 @@ const Cards = () => {
                     <Card.Text>
                         나만의 루틴 공유
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary" href='routine'>Click here</Button>
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem', margin: '1em' }}>
@@ -37,7 +37,7 @@ const Cards = () => {
                     <Card.Text>
                         추천하는 프로틴 쉐이크 & 판매처
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary" href='protein'>Click here</Button>
                 </Card.Body>
             </Card>
         </Constain>
