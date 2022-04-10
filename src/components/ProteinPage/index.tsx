@@ -38,13 +38,14 @@ const ProteinPage = (itme: any) => {
       const res = await fetch(
         `https://api.apispreadsheets.com/data/BExLWJZUR6WWSFGu/`
         ).then(res=>{
-          if(res.status == 200){
+          if(res.status === 200){
             res.json().then(data=>{
               const apiData = data
               dispatch(fetchRequest(apiData));
             }).catch(err => console.log(err))
           }
-        });
+        })
+        console.log('res', res);
     } catch (err) {
       console.log('error:', err);
     }
