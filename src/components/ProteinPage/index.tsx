@@ -31,30 +31,6 @@ const { Search } = Input;
 
 const ProteinPage = (itme: any) => {
   const [name, setName] = useState('');
-  const dispatch = useDispatch();
-
-  const getData = async () => {
-    try {
-      const res = await fetch(
-        `https://api.apispreadsheets.com/data/BExLWJZUR6WWSFGu/`
-        ).then(res=>{
-          if(res.status === 200){
-            res.json().then(data=>{
-              const apiData = data
-              console.log('teststst',apiData.data[0].name)
-              dispatch(fetchRequest(apiData));
-            }).catch(err => console.log(err))
-          }
-        })
-        console.log('res', res);
-    } catch (err) {
-      console.log('error:', err);
-    }
-  };
-
-  useEffect(() => {
-    getData();
-  })
 
   return (
     <Constain>  
