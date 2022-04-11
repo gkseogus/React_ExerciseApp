@@ -41,6 +41,7 @@ const ProteinPage = (itme: any) => {
           if(res.status == 200){
             res.json().then(data=>{
               const apiData = data
+              console.log('teststst',apiData.data[0].name)
               dispatch(fetchRequest(apiData));
             }).catch(err => console.log(err))
           }

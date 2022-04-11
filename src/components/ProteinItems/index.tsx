@@ -22,11 +22,11 @@ const ExplainFont = styled.h6`
 `
 
 const ProteinItems = () => {
-    const name = useSelector(
+    const rootData = useSelector(
         (state: ApplicationState) => state.inventory.data
       );
     
-      console.log('test',name);
+      console.log('test',rootData);
       
     return (
     <Constain>
