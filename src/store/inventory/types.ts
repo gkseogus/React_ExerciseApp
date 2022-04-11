@@ -2,7 +2,8 @@ export interface Inventory {
   name: string;
   price: string;
   flatness: string;
-  shop: string;
+  brand: string;
+  image: string;
 };
 
 // 전송 가능한 액션 유형
