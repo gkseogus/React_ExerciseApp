@@ -45,9 +45,14 @@ const Navbar1 = () => {
             Home
           </NavbarFont>
         </Nav.Link>
-        <Nav.Link href="link">
+        <Nav.Link href="weight">
           <NavbarFont>
-            Link
+            Weight
+          </NavbarFont>
+        </Nav.Link>
+        <Nav.Link href="routine">
+          <NavbarFont>
+            Routine
           </NavbarFont>
         </Nav.Link>
         <NavDropdown title={
