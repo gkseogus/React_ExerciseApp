@@ -6,7 +6,6 @@ import ProteinPage from './components/ProteinPage';
 
 const Routes: React.SFC = () => (
   <div>
-    {/* 첫 번째 route */}
     <Route exact 
       path='/'
       render={() => 
@@ -16,13 +15,30 @@ const Routes: React.SFC = () => (
         </div>
       } 
     />
-    {/* 두 번째 route */}
     <Route exact 
       path='/protein'
       render={() => 
         <div>
           <Navbar/>
           <ProteinPage/>
+        </div>
+      } 
+    />
+    <Route exact 
+      path='/weight'
+      render={() => 
+        <div>
+          <Navbar/>
+          <HomePage/>
+        </div>
+      } 
+    />
+    <Route exact 
+      path='/routine'
+      render={() => 
+        <div>
+          <Navbar/>
+          <HomePage/>
         </div>
       } 
     />
