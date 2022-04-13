@@ -15,16 +15,7 @@ const Routes: React.SFC = () => (
         </div>
       } 
     />
-    <Route exact 
-      path='/protein'
-      render={() => 
-        <div>
-          <Navbar/>
-          <ProteinPage/>
-        </div>
-      } 
-    />
-    <Route exact 
+    <Route  
       path='/weight'
       render={() => 
         <div>
@@ -39,6 +30,15 @@ const Routes: React.SFC = () => (
         <div>
           <Navbar/>
           <HomePage/>
+        </div>
+      } 
+    />
+    <Route  
+      path='/protein'
+      render={() => 
+        <div>
+          <Navbar/>
+          <ProteinPage/>
         </div>
       } 
     />
