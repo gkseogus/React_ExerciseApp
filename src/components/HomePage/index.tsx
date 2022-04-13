@@ -32,8 +32,8 @@ const HomePage = () => {
   
   const getData = async () => {
     try {
-      const res = await fetch(
-        `https://api.apispreadsheets.com/data/0M7oCHWmtW9lERVR/`
+      await fetch(
+        `https://api.apispreadsheets.com/data/QCozsYj4WuidC2z9/`
         ).then(res=>{
           if(res.status === 200){
             res.json().then(data=>{
@@ -42,7 +42,6 @@ const HomePage = () => {
             }).catch(err => console.log(err))
           }
         })
-        console.log('res', res);
     } catch (err) {
       console.log('error:', err);
     }
