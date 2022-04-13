@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const TitleFont = styled.h6`
@@ -23,15 +24,17 @@ const Navbar1 = () => {
   return (
 <Navbar bg="black" expand="lg">
   <Container>
-    <Navbar.Brand href="/">
-      <img
-            alt=""
-            src="/Image/gym.svg"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-      />
-    </Navbar.Brand>
+    <Link to="/">
+      <Navbar.Brand>
+        <img
+              alt=""
+              src="/Image/gym.svg"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+        />
+      </Navbar.Brand>
+    </Link>
     <TitleFont>
           HDH Exercise Blog
     </TitleFont>
@@ -40,20 +43,26 @@ const Navbar1 = () => {
       <Nav className="me-auto" style={{
         padding: '20px'
       }}>
-        <Nav.Link href="/">
-          <NavbarFont>
-            Home
-          </NavbarFont>
+        <Nav.Link>
+          <Link to="/">
+            <NavbarFont>
+              Home
+            </NavbarFont>
+          </Link>
         </Nav.Link>
-        <Nav.Link href="weight">
-          <NavbarFont>
-            Weight
-          </NavbarFont>
+        <Nav.Link>
+          <Link to="/weight">
+            <NavbarFont>
+              Weight
+            </NavbarFont>
+          </Link>
         </Nav.Link>
-        <Nav.Link href="routine">
-          <NavbarFont>
-            Routine
-          </NavbarFont>
+        <Nav.Link>
+          <Link to="/routine">
+            <NavbarFont>
+              Routine
+            </NavbarFont>
+          </Link>
         </Nav.Link>
         <NavDropdown title={
           <NavbarFont>
