@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import { fetchRequest } from '../../store/inventory/action';
 import Cards from '../Cards';
 
 const Constain = styled.div`
@@ -26,6 +28,31 @@ const FirstFont = styled.h1`
 `
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+  
+  const getData = async () => {
+    try {
+      const res = await fetch(
+        `https://api.apispreadsheets.com/data/0M7oCHWmtW9lERVR/`
+        ).then(res=>{
+          if(res.status === 200){
+            res.json().then(data=>{
+              const apiData = data
+              dispatch(fetchRequest(apiData.data));
+            }).catch(err => console.log(err))
+          }
+        })
+        console.log('res', res);
+    } catch (err) {
+      console.log('error:', err);
+    }
+  };
+
+
+  useEffect(() => {
+    getData();
+  });
+
   return (
     <Constain>  
       <FirstFont>
