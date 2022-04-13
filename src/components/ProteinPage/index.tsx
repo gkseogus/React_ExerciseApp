@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
 import styled from 'styled-components';
 import ProteinItems from '../ProteinItems';
-import { fetchRequest } from '../../store/inventory/action';
-import { useDispatch } from 'react-redux';
-
 
 const Constain = styled.div`
   padding: 1em;
