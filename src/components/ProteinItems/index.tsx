@@ -19,7 +19,7 @@ const ListConstain = styled.li`
 
 const ExplainFont = styled.h6`
     color: white;
-    text-align: left;
+    text-align: center;
 `
 
 const ProteinItems = () => {
@@ -47,9 +47,9 @@ const ProteinItems = () => {
                                 return(
                                     <div key={uuid_v4()}>
                                         이름: {item.name} <br/>
+                                        브랜드: {item.brand} <br/>
                                         가격: {item.price} <br/>
                                         맛: {item.flatness} <br/>
-                                        브랜드: {item.brand} <br/>
                                     </div>
                                 );
                             })
