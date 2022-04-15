@@ -3,6 +3,8 @@ import { Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import Navbar from './components/Navbar';
 import ProteinPage from './components/ProteinPage';
+import RoutinePage from './components/RoutinePage';
+import WeightPage from './components/WeightPage';
 
 const Routes: React.SFC = () => (
   <div>
@@ -20,7 +22,7 @@ const Routes: React.SFC = () => (
       render={() => 
         <div>
           <Navbar/>
-          <HomePage/>
+          <WeightPage/>
         </div>
       } 
     />
@@ -29,7 +31,7 @@ const Routes: React.SFC = () => (
       render={() => 
         <div>
           <Navbar/>
-          <HomePage/>
+          <RoutinePage/>
         </div>
       } 
     />
