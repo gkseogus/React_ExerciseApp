@@ -1,12 +1,11 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
-
+import RoutineItems from '../RoutineItems';
 
 const Constain = styled.div`
   padding: 1em;
   background: black;
-  height: 100vh;
 `
 
 const FirstFont = styled.h1`
@@ -23,9 +22,10 @@ const RoutinePage = () => {
 
   return (
     <Constain>  
-        <FirstFont>
-            Routine
-        </FirstFont>
+      <FirstFont>
+          Routine
+      </FirstFont>
+      <RoutineItems/>
     </Constain>
   );
 };
