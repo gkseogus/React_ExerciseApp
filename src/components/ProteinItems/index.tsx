@@ -51,7 +51,7 @@ const ProteinItems = () => {
     <Constain>
         <ProteinSearchForm>
             <Space direction="vertical">
-                <Search placeholder="search protein" allowClear onChange={(e) => setSearchKeyword(e.target.value)}
+                <Search placeholder="search protein" allowClear={true} onChange={(e) => setSearchKeyword(e.target.value)}
                 style={{ 
                     width: 400,
                     padding: '20px'
