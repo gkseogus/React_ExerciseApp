@@ -16,6 +16,11 @@ const TitleFont = styled.h6`
 const NavbarFont = styled.h6`
   color: white;
   position: static;
+  height: 10px;
+`
+
+const NavLink = styled.div`
+  padding: 5px;
 `
 
 const Navbar1 = () => {
@@ -43,27 +48,27 @@ const Navbar1 = () => {
       <Nav className="me-auto" style={{
         padding: '20px'
       }}>
-        <Nav.Link>
+        <NavLink>
           <Link to="/">
-            <NavbarFont>
-              Home
-            </NavbarFont>
+              <NavbarFont>
+                Home
+              </NavbarFont>
           </Link>
-        </Nav.Link>
-        <Nav.Link>
+        </NavLink>
+        <NavLink>
           <Link to="/weight">
             <NavbarFont>
               Weight
             </NavbarFont>
           </Link>
-        </Nav.Link>
-        <Nav.Link>
+        </NavLink>
+        <NavLink>
           <Link to="/routine">
             <NavbarFont>
               Routine
             </NavbarFont>
           </Link>
-        </Nav.Link>
+        </NavLink>
         <NavDropdown title={
           <NavbarFont>
             BGM
