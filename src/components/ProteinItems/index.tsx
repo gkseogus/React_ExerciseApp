@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Figure } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { ApplicationState } from '../../store';
 import { v4 as uuid_v4 } from 'uuid';
 import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
+import { fetchRequest } from '../../store/inventory/action';
 
 const Constain = styled.div`
     display: flex;
@@ -37,6 +38,7 @@ const ProteinSearchForm = styled.div`
 const ProteinItems = () => {
     const { Search } = Input;
 
+    const dispatch = useDispatch();
     const [searchKeyword, setSearchKeyword] = useState('');
 
     const rootData = useSelector(
@@ -46,7 +48,29 @@ const ProteinItems = () => {
     const searchData =  rootData.filter(
       (i) => !searchKeyword || i.name.includes(searchKeyword)
     );
-  
+
+    const getData = async () => {
+        try {
+          await fetch(
+            `https://api.apispreadsheets.com/data/xpXPZPWtxR1MsrUN/`
+            ).then(res=>{
+              if(res.status === 200){
+                res.json().then(data=>{
+                  const apiData = data
+                  dispatch(fetchRequest(apiData.data));
+                }).catch(err => console.log(err))
+              }
+            })
+        } catch (err) {
+          console.log('error:', err);
+        }
+      };
+    
+    
+      useEffect(() => {
+        getData();
+      });
+    
     return (
     <Constain>
         <ProteinSearchForm>
