@@ -9,8 +9,9 @@ import { Input, Space } from 'antd';
 import { fetchRequest } from '../../store/inventory/action';
 
 const Constain = styled.div`
-    display: flex;
-    justify-content: center;
+    padding: 1em;
+    background: black;
+    height: 100vh;
 `
 const ListConstain = styled.li`
   text-align: center;
@@ -18,6 +19,7 @@ const ListConstain = styled.li`
   margin-left: auto;
   margin-right: auto;
   padding: 100px;
+  background: black;
 `
 
 const ExplainFont = styled.h6`
@@ -52,7 +54,7 @@ const ProteinItems = () => {
     const getData = async () => {
         try {
           await fetch(
-            `https://api.apispreadsheets.com/data/NNhVLw1zu5ku2Z7f/`
+            `https://api.apispreadsheets.com/data/d1lCLzNKFvlQd8vh/`
             ).then(res=>{
               if(res.status === 200){
                 res.json().then(data=>{
