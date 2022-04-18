@@ -17,10 +17,11 @@ const NavbarFont = styled.h6`
   color: white;
   position: static;
   height: 10px;
+  padding: 7px;
 `
 
 const NavLink = styled.div`
-  padding: 5px;
+  padding: 7px;
 `
 
 const Navbar1 = () => {
