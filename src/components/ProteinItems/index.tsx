@@ -34,18 +34,18 @@ const ProteinItems = () => {
     <Constain>
         <ListConstain>
             <Figure style={{ padding: '10px'}}>
-                <Figure.Image
-                    width={200}
-                    height={200}
-                    alt="200x200"
-                    src='/Image/myProtein_logo.jpg'
-                />
                 <Figure.Caption>
                     <ExplainFont>
                         {
                             rootData.map(item => {
                                 return(
                                     <div key={uuid_v4()}>
+                                        <Figure.Image
+                                            width={200}
+                                            height={200}
+                                            alt="200x200"
+                                            src={item.image}
+                                        /><br/>
                                         이름: {item.name} <br/>
                                         브랜드: {item.brand} <br/>
                                         가격: {item.price} <br/>
