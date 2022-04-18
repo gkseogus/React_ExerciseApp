@@ -47,7 +47,7 @@ const TabsFont = styled.h3`
 
 const ImageContainer = styled.div`
   display: block;
-  margin-left: 42%;
+  margin-left: 43.3%;
   width: 50%;
 `
 
