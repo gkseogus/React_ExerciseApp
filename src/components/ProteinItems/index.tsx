@@ -52,7 +52,7 @@ const ProteinItems = () => {
     const getData = async () => {
         try {
           await fetch(
-            `https://api.apispreadsheets.com/data/xpXPZPWtxR1MsrUN/`
+            `https://api.apispreadsheets.com/data/NNhVLw1zu5ku2Z7f/`
             ).then(res=>{
               if(res.status === 200){
                 res.json().then(data=>{
