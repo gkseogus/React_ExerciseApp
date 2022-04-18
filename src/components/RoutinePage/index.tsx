@@ -10,7 +10,7 @@ import Shulder from '../RoutineItems/shoulder';
 const Constain = styled.div`
   padding: 1em;
   background: black;
-  height: 100%;
+  height: 100vmax;
 `
 
 const FirstFont = styled.h1`
@@ -47,8 +47,8 @@ const TabsFont = styled.h3`
 
 const ImageContainer = styled.div`
   display: block;
-  margin-left: 43.3%;
-  width: 50%;
+  width: 100%;
+  text-align: center;
 `
 
 const RoutinePage = () => {
