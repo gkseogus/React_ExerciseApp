@@ -7,6 +7,7 @@ import { v4 as uuid_v4 } from 'uuid';
 import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
 import { fetchRequest } from '../../store/inventory/action';
+import { trackPromise } from 'react-promise-tracker';
 
 const ListConstain = styled.li`
   text-align: center;
@@ -46,7 +47,7 @@ const ProteinItems = () => {
 
     const getData = async () => {
         try {
-          await fetch(
+          await trackPromise(fetch(
             `https://api.apispreadsheets.com/data/FJTALrTYaT8MLcVS/`
             ).then(res=>{
               if(res.status === 200){
@@ -55,7 +56,7 @@ const ProteinItems = () => {
                   dispatch(fetchRequest(apiData.data));
                 }).catch(err => console.log(err))
               }
-            })
+            }))
         } catch (err) {
           console.log('error:', err);
         }
