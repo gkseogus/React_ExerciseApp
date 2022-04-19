@@ -8,16 +8,9 @@ import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
 import { fetchRequest } from '../../store/inventory/action';
 
-const Constain = styled.div`
-    padding: 1em;
-    background: black;
-    height: 100vh;
-`
 const ListConstain = styled.li`
   text-align: center;
   position: static;
-  margin-left: auto;
-  margin-right: auto;
   padding: 100px;
   background: black;
 `
@@ -54,7 +47,7 @@ const ProteinItems = () => {
     const getData = async () => {
         try {
           await fetch(
-            `https://api.apispreadsheets.com/data/d1lCLzNKFvlQd8vh/`
+            `https://api.apispreadsheets.com/data/FJTALrTYaT8MLcVS/`
             ).then(res=>{
               if(res.status === 200){
                 res.json().then(data=>{
@@ -74,7 +67,7 @@ const ProteinItems = () => {
       });
     
     return (
-    <Constain>
+    <div>
         <ProteinSearchForm>
             <Space direction="vertical">
                 <Search placeholder="search protein" allowClear={true} onChange={(e) => setSearchKeyword(e.target.value)}
@@ -110,7 +103,7 @@ const ProteinItems = () => {
                 </Figure.Caption>
             </Figure>
         </ListConstain>
-    </Constain>
+    </div>
     );
 };
 
