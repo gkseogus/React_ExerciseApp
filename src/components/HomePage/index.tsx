@@ -44,7 +44,7 @@ const HomePage = () => {
       </Constain>
       <Card>
         <FooterFont>
-          <Card.Header as="h6">단순 운동 취미를 가진 개발자 사이트 입니다.</Card.Header>
+          <Card.Header>단순 운동 취미를 가진 개발자 사이트 입니다.</Card.Header>
         </FooterFont>
         <Card.Body>
           <Card.Title>-사이트 정보-</Card.Title>
