@@ -5,6 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { createBrowserHistory } from "history";
 import configureStore from "./configureStore";
+import LoadingIndicator from "./components/LoadingIndicator";
 
 const history = createBrowserHistory(); 
 const initialState: any = {};
@@ -14,6 +15,7 @@ const store = configureStore(history, initialState);
 ReactDOM.render(
   <div>
     <App store={store} history={history} />
+    <LoadingIndicator/>
   </div>,
   document.getElementById("root")
 );
