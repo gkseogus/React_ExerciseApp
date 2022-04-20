@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { Button } from 'react-bootstrap';
 import { useDispatch } from "react-redux";
 import { fetchRequest } from "../../store/inventory/action";
 
@@ -82,13 +83,13 @@ export const AuthController = () => {
   return (
     <>
       {isSignedIn ? (
-        <button id="signout_button" onClick={handleSignoutClick}>
+        <Button id="signout_Button" variant="light" size='sm' onClick={handleSignoutClick}>
           Sign Out
-        </button>
+        </Button>
       ) : (
-        <button id="authorize_button" onClick={handleAuthClick}>
+        <Button id="authorize_Button" variant="light" size='sm' onClick={handleAuthClick}>
           Sign in
-        </button>
+        </Button>
       )}
     </>
   );
