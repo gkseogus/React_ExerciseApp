@@ -82,9 +82,9 @@ const MainNavbar = () => {
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <AuthController/>  
         </Navbar.Collapse>
       </Container>
-      <AuthController/>  
     </Navbar>
   );
 };
