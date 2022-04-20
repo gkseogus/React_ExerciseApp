@@ -55,7 +55,6 @@ export const AuthController = () => {
   }; 
   
   useEffect(() => {
-    console.log('test')
     // 구글 auth 모듈 초기 내용 설정
     window.gapi.load('client:auth2', async () => {
       try {
