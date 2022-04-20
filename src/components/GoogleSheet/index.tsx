@@ -1,24 +1,27 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { fetchRequest } from "../../store/inventory/action";
 
 declare const window: Window & {
     gapi: any;
   };
  
 
-var CLIENT_ID = '468304921430-6juo28nrclm5l6jtieca5koopgkt01r6.apps.googleusercontent.com';
-var API_KEY = 'AIzaSyAZgIPp58hO1P6Fps43ADOHuYrHwS9GITg';
+var CLIENT_ID = '315488453608-u11q14rfsiksqap2qikabjad8rlrl7tv.apps.googleusercontent.com';
+var API_KEY = 'AIzaSyBJVmcqT9BpI-GsriTumqHiykRNgZ2HGOU';
 
 var DISCOVERY_DOCS = ['https://sheets.googleapis.com/$discovery/rest?version=v4'];
 
 var SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 
-export const AuthController = ({ fetchRequest }: any) => {
+export const AuthController = () => {
   const dispatch = useDispatch();
+  const [isSignedIn, setIsSignedIn] = useState(false);
 
   const updateSigninStatus = useCallback((isSignedIn: boolean) => {
-
-      // 로그인 성공시 스프레트 시트를 불러옴
+    setIsSignedIn(isSignedIn);
+    
+    if (isSignedIn){
       window.gapi.client.sheets.spreadsheets.values
         .get({
           spreadsheetId: '1IRgIFpdzgBnPbWOKDQyTYndhRsxQMKYdfH989n6fRQQ',
@@ -35,9 +38,23 @@ export const AuthController = ({ fetchRequest }: any) => {
             }))
           ));
         });
-  }, [dispatch, fetchRequest]);
+      } else{
+        fetchRequest([]);
+      }
+  }, [dispatch]);
 
+  // 버튼 클릭 시 사용자를 로그인
+  const handleAuthClick = () => {
+    window.gapi.auth2.getAuthInstance().signIn();
+  };
+
+  // 버튼 클릭 시 사용자를 로그아웃
+  const handleSignoutClick = () => {
+    window.gapi.auth2.getAuthInstance().signOut();
+  }; 
+  
   useEffect(() => {
+    console.log('test')
     // 구글 auth 모듈 초기 내용 설정
     window.gapi.load('client:auth2', async () => {
       try {
@@ -47,6 +64,15 @@ export const AuthController = ({ fetchRequest }: any) => {
           discoveryDocs: DISCOVERY_DOCS, 
           scope: SCOPES
         });
+        // 로그인 상태 변경을 위한 listen(연결 요청 대기 메소드)
+        window.gapi.auth2
+        .getAuthInstance()
+        .isSignedIn.listen(updateSigninStatus);
+
+        // 초기 로그인 상태를 처리
+        updateSigninStatus(
+          window.gapi.auth2.getAuthInstance().isSignedIn.get()
+        );
       } catch (error) {
         alert(error);
       }
@@ -55,6 +81,15 @@ export const AuthController = ({ fetchRequest }: any) => {
 
   return (
     <>
+      {isSignedIn ? (
+        <button id="signout_button" onClick={handleSignoutClick}>
+          Sign Out
+        </button>
+      ) : (
+        <button id="authorize_button" onClick={handleAuthClick}>
+          Sign in
+        </button>
+      )}
     </>
   );
 }
