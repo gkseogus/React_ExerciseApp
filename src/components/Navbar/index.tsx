@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { AuthController } from '../GoogleSheet';
 
 const TitleFont = styled.h6`
   color: white;
@@ -24,68 +25,68 @@ const NavLink = styled.div`
   padding: 7px;
 `
 
-const Navbar1 = () => {
-
+const MainNavbar = () => {
 
   return (
-<Navbar bg="black" expand="lg">
-  <Container>
-    <Link to="/">
-      <Navbar.Brand>
-        <img
+    <Navbar bg="black" expand="lg">
+      <Container>
+        <Link to="/">
+          <Navbar.Brand>
+            <img
               alt=""
               src="/Image/gym.svg"
               width="30"
               height="30"
               className="d-inline-block align-top"
-        />
-      </Navbar.Brand>
-    </Link>
-    <TitleFont>
-          HDH Exercise Blog
-    </TitleFont>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto" style={{
-        padding: '20px'
-      }}>
-        <NavLink>
-          <Link to="/">
+            />
+          </Navbar.Brand>
+        </Link>
+        <TitleFont>
+              HDH Exercise Blog
+        </TitleFont>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto" style={{
+            padding: '20px'
+          }}>
+            <NavLink>
+              <Link to="/">
+                  <NavbarFont>
+                    Home
+                  </NavbarFont>
+              </Link>
+            </NavLink>
+            <NavLink>
+              <Link to="/weight">
+                <NavbarFont>
+                  Weight
+                </NavbarFont>
+              </Link>
+            </NavLink>
+            <NavLink>
+              <Link to="/routine">
+                <NavbarFont>
+                  Routine
+                </NavbarFont>
+              </Link>
+            </NavLink>
+            <NavDropdown title={
               <NavbarFont>
-                Home
+                BGM
               </NavbarFont>
-          </Link>
-        </NavLink>
-        <NavLink>
-          <Link to="/weight">
-            <NavbarFont>
-              Weight
-            </NavbarFont>
-          </Link>
-        </NavLink>
-        <NavLink>
-          <Link to="/routine">
-            <NavbarFont>
-              Routine
-            </NavbarFont>
-          </Link>
-        </NavLink>
-        <NavDropdown title={
-          <NavbarFont>
-            BGM
-          </NavbarFont>
-        } id="basic-nav-dropdown">
-          <NavDropdown.Item href="#bgm/pop">POP</NavDropdown.Item>
-          <NavDropdown.Item href="#bgm/kpop">KPOP</NavDropdown.Item>
-          <NavDropdown.Item href="#bgm/clup">CLUP</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-        </NavDropdown>
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
+            } id="basic-nav-dropdown">
+              <NavDropdown.Item href="#bgm/pop">POP</NavDropdown.Item>
+              <NavDropdown.Item href="#bgm/kpop">KPOP</NavDropdown.Item>
+              <NavDropdown.Item href="#bgm/clup">CLUP</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+      <AuthController/>  
+    </Navbar>
   );
 };
 
-export default React.memo(Navbar1);
+export default React.memo(MainNavbar);
