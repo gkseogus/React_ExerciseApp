@@ -6,7 +6,7 @@ import ProteinItems from '../ProteinItems';
 const Constain = styled.div`
   padding: 1em;
   background: black;
-  height: 100vh;
+  height: 100%;
 `
 
 const FirstFont = styled.h1`
