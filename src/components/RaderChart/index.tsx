@@ -1,8 +1,8 @@
 import { ResponsiveRadar } from '@nivo/radar'
 import React from 'react'
-import { chartData } from './chartData';
+import { chartData } from '../../components/RaderChart/chartData';
 
-export const MyResponsiveRadar = () => (
+const MyResponsiveRadar = () => (
     <ResponsiveRadar
         data={chartData}
         keys={[ 'chardonay', 'carmenere', 'syrah' ]}
@@ -24,7 +24,7 @@ export const MyResponsiveRadar = () => (
                 direction: 'column',
                 translateX: -50,
                 translateY: -40,
-                itemWidth: 80,
+                itemWidth: 40,
                 itemHeight: 20,
                 itemTextColor: '#999',
                 symbolSize: 12,
@@ -40,4 +40,5 @@ export const MyResponsiveRadar = () => (
             }
         ]}
     />
-)
+);
+export default React.memo(MyResponsiveRadar);
