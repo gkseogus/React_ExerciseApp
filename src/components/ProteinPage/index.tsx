@@ -2,6 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
 import ProteinItems from '../ProteinItems';
+import RaderChart from '../RaderChart/index';
 
 const Constain = styled.div`
   padding: 1em;
@@ -23,10 +24,11 @@ const ProteinPage = (itme: any) => {
 
   return (
     <Constain>  
-        <FirstFont>
-            Protein 
-        </FirstFont>
-        <ProteinItems/>
+      <FirstFont>
+        Protein 
+      </FirstFont>
+      <RaderChart/>  
+      <ProteinItems/>
     </Constain>
   );
 };
