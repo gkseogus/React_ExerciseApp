@@ -8,6 +8,7 @@ This Application is a boilerplate for Type Safe redux Applications. React + Redu
 ### 1. 운동 루트 기능 구현
 ### 2. 프로틴 검색 기능 구현
 ### 3. NavBar 기능 구현
+### 4. 인바디 그래프 구현
 
 
 ## Setup
