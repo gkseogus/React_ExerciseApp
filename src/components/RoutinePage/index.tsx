@@ -68,6 +68,9 @@ const RoutinePage = () => {
         <FirstFont>
           Routine
         </FirstFont>
+        <ContentsFont>
+          Inbody
+        </ContentsFont>
         <ChartConstain>
           <MyResponsiveRadar/>
         </ChartConstain>
