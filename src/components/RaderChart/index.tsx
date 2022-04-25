@@ -4,8 +4,12 @@ import { chartData } from '../../components/RaderChart/chartData';
 import styled from 'styled-components';
 
 const RadarChartBox = styled.div`
-    height: 600px;
-    width: 600px;
+    @media (min-width: 760px) {
+        height: 600px;
+        width: 600px;
+    }
+    height: 300px;
+    width: 300px;
     display: inline-block;
 `
 
