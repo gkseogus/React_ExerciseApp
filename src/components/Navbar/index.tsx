@@ -70,6 +70,13 @@ const MainNavbar = () => {
                 </NavbarFont>
               </Link>
             </NavLink>
+            <NavLink>
+              <Link to="/protein">
+                <NavbarFont>
+                  Protein
+                </NavbarFont>
+              </Link>
+            </NavLink>
             <NavDropdown title={
               <NavbarFont>
                 BGM
