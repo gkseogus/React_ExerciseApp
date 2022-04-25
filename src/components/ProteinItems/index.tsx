@@ -70,7 +70,7 @@ const ProteinItems = () => {
                     이름: {item.name} <br/>
                     브랜드: {item.brand} <br/>
                     가격: {item.price} <br/>
-                    맛: {item.flatness} <br/><br/>
+                    맛: {item.flatness} <br/><br/><br/>
                   </div>
                 );
               })
