@@ -31,8 +31,8 @@ const FirstFont = styled.h1`
   font-family: 'Rubik Glitch', cursive;
 `
 const ContentsFont = styled.h1`
-  padding: 5%;
-  font-size: 20px;
+  padding: 20px;
+  font-size: 50px;
   text-align: center;
   background: linear-gradient(to right top, #000000, #94eb09);
   color: transparent;
@@ -57,6 +57,7 @@ const ImageContainer = styled.div`
   display: block;
   width: 100%;
   text-align: center;
+  padding: 100px;
 `
 
 const RoutinePage = () => {
@@ -77,7 +78,7 @@ const RoutinePage = () => {
                 Chest Exercise Routine
               </ContentsFont>
               <ImageContainer>
-                <img className = 'chestImg' src="/Image/RoutineImage/chest.jpg" alt='가슴사진' height='150' width='250'/>
+                <img className = 'chestImg' src="/Image/RoutineImage/chest.jpg" alt='가슴사진' height='200' width='250'/>
               </ImageContainer>
               <TabFont>저중량: 5 set, 8회~ 12회</TabFont>
               <TabFont>고중량: 5 set, 5회 ~ 10회</TabFont>
@@ -88,7 +89,7 @@ const RoutinePage = () => {
                 Back Exercise Routine
               </ContentsFont>
               <ImageContainer>
-                <img className = 'backImg' src="/Image/RoutineImage/back.jpg" alt='등사진' height='150' width='250'/>
+                <img className = 'backImg' src="/Image/RoutineImage/back.jpg" alt='등사진' height='200' width='250'/>
               </ImageContainer>
               <TabFont>저중량: 5 set, 8회~ 12회</TabFont>
               <TabFont>고중량: 5 set, 5회 ~ 10회</TabFont>
@@ -99,7 +100,7 @@ const RoutinePage = () => {
                 Arm Exercise Routine
               </ContentsFont>
               <ImageContainer>
-                <img className = 'armImg' src="/Image/RoutineImage/arm.jpg" alt='팔사진' height='150' width='250'/>
+                <img className = 'armImg' src="/Image/RoutineImage/arm.jpg" alt='팔사진' height='200' width='250'/>
               </ImageContainer>
               <TabFont>저중량: 5 set, 8회~ 12회</TabFont>
               <TabFont>고중량: 5 set, 5회 ~ 10회</TabFont>
@@ -110,7 +111,7 @@ const RoutinePage = () => {
                 Shoulder Exercise Routine
               </ContentsFont>
               <ImageContainer>
-                <img className = 'shoulderImg' src="/Image/RoutineImage/shoulder.jpg" alt='어깨사진' height='150' width='250'/>
+                <img className = 'shoulderImg' src="/Image/RoutineImage/shoulder.jpg" alt='어깨사진' height='200' width='250'/>
               </ImageContainer>
               <TabFont>저중량: 5 set, 8회~ 12회</TabFont>
               <TabFont>고중량: 5 set, 5회 ~ 10회</TabFont>
