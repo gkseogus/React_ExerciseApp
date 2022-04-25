@@ -6,26 +6,28 @@ import styled from 'styled-components';
 const RadarChartBox = styled.div`
     height: 600px;
     width: 600px;
+    display: inline-block;
 `
 
 const MyResponsiveRadar = () => (
     <RadarChartBox>
         <ResponsiveRadar
             data={chartData} 
-            keys={[ 'chardonay', 'carmenere', 'syrah' ]}
+            keys={[ 'CurrentFigure', 'HistoricalFigures' ]}
             indexBy="taste"
             valueFormat=">-.2f"
             margin={{ top: 70, right: 80, bottom: 40, left: 80 }}
             borderColor='#ffffff'
             gridShape="linear"
-            gridLabelOffset={36}
-            dotSize={10}
+            gridLabelOffset={16}
+            dotSize={6}
             dotColor={{ theme: 'grid.line.stroke' }}
             dotBorderWidth={2}
             dotBorderColor={{ from: 'color' }}
-            colors={{ scheme: 'nivo' }}
+            colors={{ scheme: 'purple_orange' }}
             blendMode="normal"
             motionConfig="wobbly"
+            fillOpacity={0.4}
             legends={[
                 {
                     anchor: 'top-left',
@@ -34,14 +36,14 @@ const MyResponsiveRadar = () => (
                     translateY: -40,
                     itemWidth: 80,
                     itemHeight: 20,
-                    itemTextColor: '#ffffff',
+                    itemTextColor: '#999',
                     symbolSize: 12,
                     symbolShape: 'circle',
                     effects: [
                         {
                             on: 'hover',
                             style: {
-                                itemTextColor: '#ffffff'
+                                itemTextColor: '#999'
                             }
                         }
                     ]
