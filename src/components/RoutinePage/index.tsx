@@ -15,6 +15,12 @@ const Constain = styled.div`
   height: 100vmax;
 `
 
+const ChartConstain = styled.div`
+  padding: 1em;
+  background: white;
+  text-align: center;
+`
+
 const FirstFont = styled.h1`
   position: static;
   font-size: 100px;
@@ -61,6 +67,9 @@ const RoutinePage = () => {
         <FirstFont>
           Routine
         </FirstFont>
+        <ChartConstain>
+          <MyResponsiveRadar/>
+        </ChartConstain>
         <TabsFont>
           <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3" mountOnEnter={true}>
             <Tab eventKey="1" title="Chest">
@@ -108,7 +117,6 @@ const RoutinePage = () => {
               <Shulder/>
             </Tab>
           </Tabs>
-          <MyResponsiveRadar/>
         </TabsFont>
       </Constain>
       <Footer/>
