@@ -15,7 +15,7 @@ const Footer = () => {
           <Card.Header>단순 운동 취미를 가진 개발자 사이트 입니다.</Card.Header>
         </FooterFont>
         <Card.Body>
-          <Card.Title>-사이트 정보-</Card.Title>
+          <Card.Title>-개발자 정보-</Card.Title>
           <Card.Text>
             개발자 연락처: 010-2246-6787 <br/>
             개발자 이메일: fbzbffldj@gmail.com
