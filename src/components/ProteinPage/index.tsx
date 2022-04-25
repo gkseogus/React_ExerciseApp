@@ -3,6 +3,8 @@ import 'antd/dist/antd.css';
 import styled from 'styled-components';
 import ProteinItems from '../ProteinItems';
 import Footer from '../Footer';
+import { Breadcrumb } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Constain = styled.div`
   padding: 1em;
@@ -19,12 +21,27 @@ const FirstFont = styled.h1`
   -webkit-background-clip: text;
   font-family: 'Rubik Glitch', cursive;
 `
+const BreadCrumbsContstain = styled.div`
+  padding: 5px;
+  position: absolute;
+  left: 1400px;
+`
 
 const ProteinPage = (itme: any) => {
 
   return (
     <div>
       <Constain>  
+        <BreadCrumbsContstain>
+          <Breadcrumb>
+            <Breadcrumb.Item>
+              <Link to="/">
+                  Home
+              </Link>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item active>Protein</Breadcrumb.Item>
+          </Breadcrumb>
+        </BreadCrumbsContstain>
         <FirstFont>
           Protein 
         </FirstFont>

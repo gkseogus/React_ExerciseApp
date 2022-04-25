@@ -1,13 +1,14 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
-import { Tabs,Tab } from 'react-bootstrap';
+import { Tabs,Tab, Breadcrumb } from 'react-bootstrap';
 import Chest from '../RoutineItems/chest';
 import Back from '../RoutineItems/back';
 import Arm from '../RoutineItems/arm';
 import Shulder from '../RoutineItems/shoulder';
 import MyResponsiveRadar from '../RaderChart/index';
 import Footer from '../Footer';
+import { Link } from 'react-router-dom';
 
 const Constain = styled.div`
   padding: 1em;
@@ -60,11 +61,27 @@ const ImageContainer = styled.div`
   padding: 100px;
 `
 
+const BreadCrumbsContstain = styled.div`
+  padding: 5px;
+  position: absolute;
+  left: 1400px;
+`
+
 const RoutinePage = () => {
 
   return (
     <div>
       <Constain>  
+        <BreadCrumbsContstain>
+          <Breadcrumb>
+            <Breadcrumb.Item>
+              <Link to="/">
+                  Home
+              </Link>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item active>Routine</Breadcrumb.Item>
+          </Breadcrumb>
+        </BreadCrumbsContstain>
         <FirstFont>
           Routine
         </FirstFont>
