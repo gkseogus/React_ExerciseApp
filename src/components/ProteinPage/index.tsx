@@ -21,6 +21,16 @@ const FirstFont = styled.h1`
   -webkit-background-clip: text;
   font-family: 'Rubik Glitch', cursive;
 `
+
+const SecondFont = styled.h6`
+  position: static;
+  text-align: center;
+  background: linear-gradient(to right top, #000000, #94eb09);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-family: 'Noto Sans KR', sans-serif;
+`
+
 const BreadCrumbsContstain = styled.div`
   @media (min-width: 760px) {
     padding: 5px;
@@ -49,6 +59,9 @@ const ProteinPage = (itme: any) => {
         </BreadCrumbsContstain>
         <FirstFont>
           Protein 
+          <SecondFont>
+            로그인해야 볼 수 있음
+          </SecondFont>
         </FirstFont>
         <ProteinItems/>
       </Constain>
