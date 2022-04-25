@@ -65,7 +65,7 @@ const BreadCrumbsContstain = styled.div`
   @media (min-width: 760px) {
     padding: 5px;
     position: absolute;
-    left: 1400px;
+    left: 1350px;
   }
   padding: 5px;
   position: absolute;
@@ -79,7 +79,7 @@ const RoutinePage = () => {
       <Constain>  
         <BreadCrumbsContstain>
           <Breadcrumb>
-            <Breadcrumb.Item>
+            <Breadcrumb.Item active>
               <Link to="/">
                   Home
               </Link>
