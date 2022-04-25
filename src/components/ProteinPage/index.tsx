@@ -5,6 +5,7 @@ import ProteinItems from '../ProteinItems';
 import Footer from '../Footer';
 import { Breadcrumb } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import PageNation from '../PageNation';
 
 const Constain = styled.div`
   padding: 1em;
@@ -64,6 +65,7 @@ const ProteinPage = (itme: any) => {
           </SecondFont>
         </FirstFont>
         <ProteinItems/>
+        <PageNation/>
       </Constain>
       <Footer/>
     </div>
