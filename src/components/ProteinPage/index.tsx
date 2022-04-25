@@ -22,9 +22,14 @@ const FirstFont = styled.h1`
   font-family: 'Rubik Glitch', cursive;
 `
 const BreadCrumbsContstain = styled.div`
+  @media (min-width: 760px) {
+    padding: 5px;
+    position: absolute;
+    left: 1400px;
+  }
   padding: 5px;
   position: absolute;
-  left: 1400px;
+  top: 60px;
 `
 
 const ProteinPage = (itme: any) => {
