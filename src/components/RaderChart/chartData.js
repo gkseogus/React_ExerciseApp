@@ -1,6 +1,6 @@
 export const chartData = [
  {
-  taste: 'fruity',
+  taste: '안녕',
   chardonay: 92,
   carmenere: 50,
   syrah: 30,
