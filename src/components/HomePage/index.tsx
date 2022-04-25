@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Cards from '../Cards';
-import { Card } from 'react-bootstrap';
+import Footer from '../Footer';
 
 const Constain = styled.div`
   padding: 1em;
@@ -26,10 +26,6 @@ const FirstFont = styled.h1`
   font-family: 'Rubik Glitch', cursive;
 `
 
-const FooterFont = styled.h6`
-  text-align: center;
-`
-
 const HomePage = () => {
 
   return (
@@ -42,18 +38,7 @@ const HomePage = () => {
           <Cards/>
         </ListConstain>
       </Constain>
-      <Card>
-        <FooterFont>
-          <Card.Header>단순 운동 취미를 가진 개발자 사이트 입니다.</Card.Header>
-        </FooterFont>
-        <Card.Body>
-          <Card.Title>-사이트 정보-</Card.Title>
-          <Card.Text>
-            개발자 연락처: 010-2246-6787 <br/>
-            개발자 이메일: fbzbffldj@gmail.com
-          </Card.Text>
-        </Card.Body>
-      </Card>
+      <Footer/>
     </div>
   );
 };

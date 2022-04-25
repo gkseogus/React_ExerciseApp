@@ -6,6 +6,8 @@ import Chest from '../RoutineItems/chest';
 import Back from '../RoutineItems/back';
 import Arm from '../RoutineItems/arm';
 import Shulder from '../RoutineItems/shoulder';
+import MyResponsiveRadar from '../RaderChart/index';
+import Footer from '../Footer';
 
 const Constain = styled.div`
   padding: 1em;
@@ -105,7 +107,9 @@ const RoutinePage = () => {
             <Shulder/>
           </Tab>
         </Tabs>
+        <MyResponsiveRadar/>
       </TabsFont>
+      <Footer/>
     </Constain>
   );
 };
