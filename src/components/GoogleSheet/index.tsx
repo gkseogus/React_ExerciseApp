@@ -32,7 +32,7 @@ export const AuthController = () => {
           dispatch(fetchRequest(
             response.result.values.map((row: string[]) => ({
               name: row[0],
-              price: parseInt(row[1]),
+              price: row[1],
               flatness: row[2],
               brand: row[3],
               image: row[4]
