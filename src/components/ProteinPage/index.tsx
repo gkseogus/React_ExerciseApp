@@ -23,13 +23,15 @@ const FirstFont = styled.h1`
 const ProteinPage = (itme: any) => {
 
   return (
-    <Constain>  
-      <FirstFont>
-        Protein 
-      </FirstFont>
-      <ProteinItems/>
+    <div>
+      <Constain>  
+        <FirstFont>
+          Protein 
+        </FirstFont>
+        <ProteinItems/>
+      </Constain>
       <Footer/>
-    </Constain>
+    </div>
   );
 };
 

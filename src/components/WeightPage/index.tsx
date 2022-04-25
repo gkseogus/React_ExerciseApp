@@ -1,6 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
+import Footer from '../Footer';
 
 
 const Constain = styled.div`
@@ -22,11 +23,14 @@ const FirstFont = styled.h1`
 const WeightPage = () => {
 
   return (
-    <Constain>  
+    <div>
+      <Constain>  
         <FirstFont>
-            Weight
+          Weight
         </FirstFont>
-    </Constain>
+      </Constain>
+      <Footer/>
+    </div>
   );
 };
 
