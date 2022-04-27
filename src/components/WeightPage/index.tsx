@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Footer from '../Footer';
 import { Breadcrumb } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import CardsWeight from '../CardsWeight';
 
 const Constain = styled.div`
   padding: 1em;
@@ -32,6 +33,13 @@ const BreadCrumbsContstain = styled.div`
   top: 60px;
 `
 
+const ListConstain = styled.li`
+  text-align: center;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+`
+
 const WeightPage = () => {
 
   return (
@@ -50,6 +58,9 @@ const WeightPage = () => {
         <FirstFont>
           Weight
         </FirstFont>
+        <ListConstain>
+          <CardsWeight/>
+        </ListConstain>
       </Constain>
       <Footer/>
     </div>
