@@ -24,9 +24,6 @@ const Arm = () => {
                     <RoutineFout>케이블 푸쉬 다운</RoutineFout>
                 </Carousel.Item>
                 <Carousel.Item interval={2000}>
-                    <RoutineFout>네이즐 트라이 셉</RoutineFout>
-                </Carousel.Item>
-                <Carousel.Item interval={2000}>
                     <RoutineFout>스탠딩 로프 트라이 셉 익스텐션</RoutineFout>
                 </Carousel.Item>
             </Carousel>
