@@ -43,6 +43,11 @@ const BreadCrumbsContstain = styled.div`
   top: 60px;
 `
 
+const PageNationConstain = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 const ProteinPage = (itme: any) => {
 
   return (
@@ -65,7 +70,9 @@ const ProteinPage = (itme: any) => {
           </SecondFont>
         </FirstFont>
         <ProteinItems/>
-        <PageNation/>
+        <PageNationConstain>
+          <PageNation/>
+        </PageNationConstain>
       </Constain>
       <Footer/>
     </div>
