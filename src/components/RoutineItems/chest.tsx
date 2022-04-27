@@ -24,13 +24,13 @@ const Chest = () => {
                     <RoutineFout>해머 프레스</RoutineFout>
                 </Carousel.Item>
                 <Carousel.Item interval={2000}>
+                    <RoutineFout>스미스 벤치 프레스</RoutineFout>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
                     <RoutineFout>인클라인 머신</RoutineFout>
                 </Carousel.Item>
                 <Carousel.Item interval={2000}>
                     <RoutineFout>체스트 플라이 머신</RoutineFout>
-                </Carousel.Item>
-                <Carousel.Item interval={2000}>
-                    <RoutineFout>스미스 벤치 머신</RoutineFout>
                 </Carousel.Item>
             </Carousel>
         </div>
