@@ -4,9 +4,7 @@ import { useSelector } from 'react-redux';
 import { ApplicationState } from '../../store';
 
 const PagiNation = () => {
-  const items = useSelector(
-    (state: ApplicationState) => state.inventory.data
-  );
+  const items = [];
 
   const active = 1;
   for (let number = 1; number <= items.length; number++) {
