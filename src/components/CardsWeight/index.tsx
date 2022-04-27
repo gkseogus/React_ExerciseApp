@@ -166,18 +166,18 @@ const CardsWeight = () => {
             <CardGrid>
                 <Card>
                     <Card.Body>
-                        <Card.Title><CardTitleFont>루마니안 데드</CardTitleFont></Card.Title>
+                        <Card.Title><CardTitleFont>데드 리프트</CardTitleFont></Card.Title>
                         <FirstCardFont>
                             자세 종류: 
                         </FirstCardFont>
                         <SecondCardFont>
-                            기본 <br/>
+                            기본, 루마니안, 스모 <br/>
                         </SecondCardFont>
                         <FirstCardFont>
-                            그립 종류:  
+                            그립 종류: 
                         </FirstCardFont>
                         <SecondCardFont>
-                            기본
+                            얼터네이트, 오버 
                         </SecondCardFont>
                     </Card.Body>
                 </Card>
@@ -191,10 +191,10 @@ const CardsWeight = () => {
                             기본 <br/>
                         </SecondCardFont>
                         <FirstCardFont>
-                            그립 종류:  
+                            그립 종류: 
                         </FirstCardFont>
                         <SecondCardFont>
-                            기본
+                            오버, 언더 
                         </SecondCardFont>
                     </Card.Body>
                 </Card>
@@ -205,7 +205,7 @@ const CardsWeight = () => {
                             자세 종류: 
                         </FirstCardFont>
                         <SecondCardFont>
-                            기본 <br/>
+                            기본, 원암 <br/>
                         </SecondCardFont>
                         <FirstCardFont>
                             그립 종류:  
@@ -296,7 +296,7 @@ const CardsWeight = () => {
                             자세 종류: 
                         </FirstCardFont>
                         <SecondCardFont>
-                            기본 <br/>
+                            기본, 해머 <br/>
                         </SecondCardFont>
                         <FirstCardFont>
                             그립 종류:  
@@ -319,7 +319,7 @@ const CardsWeight = () => {
                             그립 종류:  
                         </FirstCardFont>
                         <SecondCardFont>
-                            기본
+                            오버, 언더
                         </SecondCardFont>
                     </Card.Body>
                 </Card>
