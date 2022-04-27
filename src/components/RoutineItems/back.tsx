@@ -15,7 +15,7 @@ const Back = () => {
         <div>
             <Carousel>
                 <Carousel.Item interval={2000}>
-                    <RoutineFout>루마니안 데드</RoutineFout>
+                    <RoutineFout>데드 리프트</RoutineFout>
                 </Carousel.Item>
                 <Carousel.Item interval={2000}>
                     <RoutineFout>바벨 로우</RoutineFout>
