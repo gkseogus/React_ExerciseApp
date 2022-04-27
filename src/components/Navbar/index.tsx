@@ -84,9 +84,8 @@ const MainNavbar = () => {
             } id="basic-nav-dropdown">
               <NavDropdown.Item href="https://www.youtube.com/watch?v=BTDfpCqtqk0&t=15597s" target="_blank">POP</NavDropdown.Item>
               <NavDropdown.Item href="https://www.youtube.com/watch?v=hX_dU55ACTQ" target="_blank">KPOP</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.youtube.com/watch?v=eQr75KSiMJQ&t=9106s" target="_blank">CLUP</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.youtube.com/watch?v=eQr75KSiMJQ&t=9106s" target="_blank">CLUP</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <AuthController/>  
