@@ -1,7 +1,5 @@
 import React from 'react';
 import { Pagination } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
-import { ApplicationState } from '../../store';
 
 const PagiNation = () => {
   const items = [];
