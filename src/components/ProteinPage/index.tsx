@@ -5,7 +5,7 @@ import ProteinItems from '../ProteinItems';
 import Footer from '../Footer';
 import { Breadcrumb } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import PageNation from '../PageNation';
+import PagiNation from '../PagiNation';
 
 const Constain = styled.div`
   padding: 1em;
@@ -43,7 +43,7 @@ const BreadCrumbsContstain = styled.div`
   top: 60px;
 `
 
-const PageNationConstain = styled.div`
+const PagiNationConstain = styled.div`
   display: flex;
   justify-content: center;
 `
@@ -70,9 +70,9 @@ const ProteinPage = (itme: any) => {
           </SecondFont>
         </FirstFont>
         <ProteinItems/>
-        <PageNationConstain>
-          <PageNation/>
-        </PageNationConstain>
+        <PagiNationConstain>
+          <PagiNation/>
+        </PagiNationConstain>
       </Constain>
       <Footer/>
     </div>
