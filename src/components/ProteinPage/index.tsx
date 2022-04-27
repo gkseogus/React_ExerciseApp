@@ -23,9 +23,10 @@ const FirstFont = styled.h1`
   font-family: 'Rubik Glitch', cursive;
 `
 
-const SecondFont = styled.h6`
+const SecondFont = styled.div`
   position: static;
   text-align: center;
+  font-size: 30px;
   background: linear-gradient(to right top, #000000, #94eb09);
   color: transparent;
   -webkit-background-clip: text;
