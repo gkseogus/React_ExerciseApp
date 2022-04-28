@@ -387,7 +387,7 @@ const CardsWeight = () => {
                             자세 종류: 
                         </FirstCardFont>
                         <SecondCardFont>
-                            기본 <br/>
+                            기본, 원암 <br/>
                         </SecondCardFont>
                         <FirstCardFont>
                             그립 종류:  
@@ -421,13 +421,13 @@ const CardsWeight = () => {
                             자세 종류: 
                         </FirstCardFont>
                         <SecondCardFont>
-                            기본 <br/>
+                            기본, 오버헤드 <br/>
                         </SecondCardFont>
                         <FirstCardFont>
                             그립 종류:  
                         </FirstCardFont>
                         <SecondCardFont>
-                            기본
+                            기본, 썸리스
                         </SecondCardFont>
                     </Card.Body>
                 </Card>
