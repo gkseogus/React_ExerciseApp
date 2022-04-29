@@ -23,7 +23,7 @@ const FirstCardFont = styled.h3`
     text-align: left;
 `
 
-const SecondCardFont = styled.h3`
+const SecondCardFont = styled.div`
     font-size: 15px;
     text-align: left;
     padding: 5px;
