@@ -25,6 +25,10 @@ const NavLink = styled.div`
   padding: 7px;
 `
 
+const ToggleConstain = styled.div`
+  background: linear-gradient(to right top, #000000, #94eb09);
+  border-radius: 5px;
+`
 const MainNavbar = () => {
 
   return (
@@ -44,7 +48,9 @@ const MainNavbar = () => {
         <TitleFont>
               HDH Exercise Blog
         </TitleFont>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <ToggleConstain>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        </ToggleConstain>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" style={{
             padding: '20px'
