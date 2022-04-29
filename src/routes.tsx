@@ -1,50 +1,50 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import Navbar from './components/NavBar';
 import ProteinPage from './components/ProteinPage';
 import RoutinePage from './components/RoutinePage';
 import WeightPage from './components/WeightPage';
 
-const Routes: React.SFC = () => (
-  <div>
-    <Route exact 
+const RoutesApp = () => (
+  <Routes>
+    <Route 
       path='/'
-      render={() => 
+      element={
         <div>
           <Navbar/>
           <HomePage/>
         </div>
-      } 
+      }
     />
     <Route  
       path='/weight'
-      render={() => 
+      element={
         <div>
           <Navbar/>
           <WeightPage/>
         </div>
-      } 
+      }
     />
-    <Route exact 
+    <Route  
       path='/routine'
-      render={() => 
+      element={
         <div>
           <Navbar/>
           <RoutinePage/>
         </div>
-      } 
+      }
     />
     <Route  
       path='/protein'
-      render={() => 
+      element={
         <div>
           <Navbar/>
           <ProteinPage/>
         </div>
-      } 
+      }
     />
-  </div>
+  </Routes>
 );
 
-export default Routes;
+export default React.memo(RoutesApp);
