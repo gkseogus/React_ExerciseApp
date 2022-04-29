@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import ProteinItems from '../ProteinItems';
 import Footer from '../Footer';
 import { Breadcrumb } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import PagiNation from '../PagiNation';
+import { useNavigate } from 'react-router-dom';
 
 const Constain = styled.div`
   padding: 1em;
@@ -60,17 +60,25 @@ const PagiNationConstain = styled.div`
   justify-content: center;
 `
 
+const BreadcrumbFont = styled.h6`
+  background: linear-gradient(to right top, #000000, #94eb09);
+  color: transparent;
+  -webkit-background-clip: text;
+`
+
 const ProteinPage = (itme: any) => {
+
+  const navigate = useNavigate();
 
   return (
     <div>
       <Constain>  
         <BreadCrumbsContstain>
           <Breadcrumb>
-            <Breadcrumb.Item active>
-              <Link to="/">
-                  Home
-              </Link>
+            <Breadcrumb.Item active onClick={() => {navigate('/')}}>
+              <BreadcrumbFont>
+                Home
+              </BreadcrumbFont>
             </Breadcrumb.Item>
             <Breadcrumb.Item active>Protein</Breadcrumb.Item>
           </Breadcrumb>

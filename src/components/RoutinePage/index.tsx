@@ -8,7 +8,7 @@ import Arm from '../RoutineItems/arm';
 import Shulder from '../RoutineItems/shoulder';
 import MyResponsiveRadar from '../RaderChart/index';
 import Footer from '../Footer';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Constain = styled.div`
   padding: 1em;
@@ -83,7 +83,15 @@ const BreadCrumbsContstain = styled.div`
   top: 60px;
 `
 
+const BreadcrumbFont = styled.h6`
+  background: linear-gradient(to right top, #000000, #94eb09);
+  color: transparent;
+  -webkit-background-clip: text;
+`
+
 const RoutinePage = () => {
+
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -91,9 +99,11 @@ const RoutinePage = () => {
         <BreadCrumbsContstain>
           <Breadcrumb>
             <Breadcrumb.Item active>
-              <Link to="/">
-                  Home
-              </Link>
+            <Breadcrumb.Item active onClick={() => {navigate('/')}}>
+              <BreadcrumbFont>
+                Home
+              </BreadcrumbFont>
+              </Breadcrumb.Item>
             </Breadcrumb.Item>
             <Breadcrumb.Item active>Routine</Breadcrumb.Item>
           </Breadcrumb>

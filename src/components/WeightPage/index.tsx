@@ -3,8 +3,8 @@ import 'antd/dist/antd.css';
 import styled from 'styled-components';
 import Footer from '../Footer';
 import { Breadcrumb } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import CardsWeight from '../CardsWeight';
+import { useNavigate } from 'react-router-dom';
 
 const Constain = styled.div`
   padding: 1em;
@@ -62,17 +62,25 @@ const ListConstain = styled.li`
   animation: smoothAppear 1s;  
 `
 
+const BreadcrumbFont = styled.h6`
+  background: linear-gradient(to right top, #000000, #94eb09);
+  color: transparent;
+  -webkit-background-clip: text;
+`
+
 const WeightPage = () => {
+
+  const navigate = useNavigate();
 
   return (
     <div>
       <Constain>  
         <BreadCrumbsContstain>
           <Breadcrumb>
-            <Breadcrumb.Item active>
-              <Link to="/">
+            <Breadcrumb.Item active onClick={() => {navigate('/')}}>
+              <BreadcrumbFont>
                 Home
-              </Link>
+              </BreadcrumbFont>
               </Breadcrumb.Item>
             <Breadcrumb.Item active>Weight</Breadcrumb.Item>
           </Breadcrumb>
