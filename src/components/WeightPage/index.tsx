@@ -20,6 +20,17 @@ const FirstFont = styled.h1`
   color: transparent;
   -webkit-background-clip: text;
   font-family: 'Rubik Glitch', cursive;
+  @keyframes smoothAppear {
+    from {
+      opacity: 0;
+      transform: translateY(-5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  animation: smoothAppear 1s;  
 `
 
 const BreadCrumbsContstain = styled.div`
@@ -38,6 +49,17 @@ const ListConstain = styled.li`
   position: static;
   margin-left: auto;
   margin-right: auto;
+  @keyframes smoothAppear {
+    from {
+      opacity: 0;
+      transform: translateY(-5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  animation: smoothAppear 1s;  
 `
 
 const WeightPage = () => {

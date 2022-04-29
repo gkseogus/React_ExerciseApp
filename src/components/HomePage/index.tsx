@@ -14,6 +14,15 @@ const ListConstain = styled.li`
   position: static;
   margin-left: auto;
   margin-right: auto;
+  @keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  animation: slide 1s;  
 `
 
 const FirstFont = styled.h1`
