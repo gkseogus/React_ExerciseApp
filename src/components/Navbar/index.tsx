@@ -83,6 +83,13 @@ const MainNavbar = () => {
                 </NavbarFont>
               </Link>
             </NavLink>
+            <NavLink>
+              <Link to="/notice">
+                <NavbarFont>
+                  Notice
+                </NavbarFont>
+              </Link>
+            </NavLink>
             <NavDropdown title={
               <NavbarFont>
                 BGM
