@@ -17,7 +17,7 @@ const MyResponsiveRadar = () => (
     <RadarChartBox>
         <ResponsiveRadar
             data={chartData} 
-            keys={[ 'CurrentFigure', 'HistoricalFigures' ]}
+            keys={[ 'CurrentFigure', 'HistoricalFigures',  'bestFigures' ]}
             indexBy="taste"
             valueFormat=">-.2f"
             margin={{ top: 70, right: 80, bottom: 40, left: 80 }}
