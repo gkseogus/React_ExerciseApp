@@ -58,7 +58,7 @@ const ProteinItems = () => {
         <Figure.Caption>
           <ExplainFont>
             {
-              searchData.map(item => {
+              searchData?.map(item => {
                 return(
                   <div key={uuid_v4()}>
                     <Figure.Image
