@@ -6,6 +6,7 @@ import { ApplicationState } from '../../store';
 import { v4 as uuid_v4 } from 'uuid';
 import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
+import PagiNation from '../PagiNation';
 
 const ListConstain = styled.li`
   text-align: center;
