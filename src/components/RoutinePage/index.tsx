@@ -87,6 +87,10 @@ const BreadcrumbFont = styled.h6`
   background: linear-gradient(to right top, #000000, #94eb09);
   color: transparent;
   -webkit-background-clip: text;
+  &:hover{  
+    background-color : white;
+    color : white;
+  }
 `
 
 const RoutinePage = () => {
