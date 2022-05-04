@@ -30,7 +30,6 @@ const ProteinSearchForm = styled.div`
 `
 
 const ProteinItems = () => {
-  const { Search } = Input;
 
   const [searchKeyword, setSearchKeyword] = useState('');
 
@@ -46,10 +45,10 @@ const ProteinItems = () => {
   <div>
     <ProteinSearchForm>
       <Space direction="vertical">
-        <Search placeholder="search protein" allowClear={true} onChange={(e) => setSearchKeyword(e.target.value)}
+        <Input placeholder="search protein" allowClear={true} onChange={(e) => setSearchKeyword(e.target.value)}
         style={{ 
           width: 400,
-          padding: '20px'
+          height: 55,
         }} />
       </Space>
     </ProteinSearchForm>
