@@ -26,7 +26,7 @@ export const AuthController = () => {
       window.gapi.client.sheets.spreadsheets.values
         .get({
           spreadsheetId: '1IRgIFpdzgBnPbWOKDQyTYndhRsxQMKYdfH989n6fRQQ',
-          range: 'A2:E6',
+          range: 'A2:E100',
         })
         .then((response: any) => {
           dispatch(fetchRequest(
