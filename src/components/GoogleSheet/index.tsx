@@ -1,7 +1,18 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Button } from 'react-bootstrap';
 import { useDispatch } from "react-redux";
+import styled from "styled-components";
 import { fetchRequest } from "../../store/inventory/action";
+
+const LoginBtn = styled.button`
+  background-color:transparent;
+  outline: 0;
+  color: white;
+  &:hover{
+    background: linear-gradient(to right top, #000000, #BCFF66);
+    color: #BCFF66;
+    -webkit-background-clip: text;
+  }
+`
 
 declare const window: Window & {
     gapi: any;
@@ -82,13 +93,13 @@ export const AuthController = () => {
   return (
     <>
       {isSignedIn ? (
-        <Button id="signout_Button" variant="light" size='sm' onClick={handleSignoutClick}>
+        <LoginBtn id="signout_Button"  onClick={handleSignoutClick}>
           Sign Out
-        </Button>
+        </LoginBtn>
       ) : (
-        <Button id="authorize_Button" variant="light" size='sm' onClick={handleAuthClick}>
+        <LoginBtn id="authorize_Button" onClick={handleAuthClick}>
           Sign in
-        </Button>
+        </LoginBtn>
       )}
     </>
   );
