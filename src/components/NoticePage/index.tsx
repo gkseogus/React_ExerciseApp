@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Footer from '../Footer';
 import styled from 'styled-components';
-import { Navbar, Container, Offcanvas, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Container, Offcanvas, Nav, Form, FormControl, Button, Breadcrumb } from 'react-bootstrap';
 import 'antd/dist/antd.css';
 import { Collapse } from 'antd';
 import { noticeData } from '../../components/NoticePage/noticeData';
+import { useNavigate } from 'react-router-dom';
 
 const TitleFont = styled.h3`
     font-weight: bold;
@@ -22,16 +23,49 @@ const FooterDiv = styled.div`
   transform : translateY(-100%);
 `
 
+const BreadCrumbsContstain = styled.div`
+  @media (min-width: 760px) {
+    padding: 5px;
+    position: absolute;
+    left: 1350px;
+  }
+  padding: 5px;
+  position: absolute;
+  top: 60px;
+`
+
+const BreadcrumbFont = styled.h6`
+  background: linear-gradient(to right top, #000000, #94eb09);
+  color: transparent;
+  -webkit-background-clip: text;
+  &:hover{  
+    background-color : white;
+    color : white;
+  }
+`
+
 const NoticePage = () => {
-    
     const { Panel } = Collapse;
     
+    const navigate = useNavigate();
+
+    const [ searchKeyWord, setSearchKeyWord ] = useState('');
     const searchToData = () => {
         
     };
     
     return (
         <div>
+            <BreadCrumbsContstain>
+                <Breadcrumb>
+                    <Breadcrumb.Item active onClick={() => {navigate('/')}}>
+                    <BreadcrumbFont>
+                        Home
+                    </BreadcrumbFont>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item active>Notice</Breadcrumb.Item>
+                </Breadcrumb>
+            </BreadCrumbsContstain>
             <Navbar  bg="light" expand={'md'} className="mb-3">
                 <Container fluid>
                     <Navbar.Brand>
@@ -46,7 +80,7 @@ const NoticePage = () => {
                     >
                     <Offcanvas.Header closeButton>
                         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${'md'}`}>
-                        Offcanvas
+                        검색
                         </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
@@ -54,9 +88,10 @@ const NoticePage = () => {
                         <Form className="d-flex">
                         <FormControl
                             type="search"
-                            placeholder="Search"
+                            placeholder="내용을 입력하세요."
                             className="me-2"
                             aria-label="Search"
+                            onChange={(e) => setSearchKeyWord(e.target.value)}
                         />
                         <Button variant="outline-success" onClick={searchToData}>Search</Button>
                         </Form>
