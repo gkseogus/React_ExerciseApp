@@ -122,7 +122,7 @@ const RoutinePage = () => {
           <MyResponsiveRadar/>
         </ChartConstain>
         <TabsFont>
-          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3" mountOnEnter={true}>
+          <Tabs defaultActiveKey="1" id="uncontrolled-tab-example" className="mb-3" mountOnEnter={true}>
             <Tab eventKey="1" title="Chest">
               <ContentsFont>
                 Chest Exercise Routine
