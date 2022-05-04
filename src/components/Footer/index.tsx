@@ -9,7 +9,7 @@ const FooterFont = styled.h6`
 const Footer = () => {
 
   return (
-    <div>
+    <footer>
       <Card>
         <FooterFont>
           <Card.Header>단순 운동 취미를 가진 개발자 사이트 입니다.</Card.Header>
@@ -22,7 +22,7 @@ const Footer = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-    </div>
+    </footer>
   );
 };
 
