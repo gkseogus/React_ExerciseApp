@@ -1,22 +1,19 @@
 import React from 'react';
-import { Pagination } from 'react-bootstrap';
+import 'antd/dist/antd.css';
+import { Pagination } from 'antd';
+import styled from 'styled-components';
+
+const Constain = styled.div`
+  color: white;
+`
 
 const PagiNation = () => {
-  const items = [];
 
-  const active = 1;
-  for (let number = 1; number <= items.length; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active}>
-        {number}
-      </Pagination.Item>,
-    );
-  }
-    return (
-        <div>
-        <Pagination>{items}</Pagination>
-      </div>
-    );
+  return (
+    <Constain>
+      <Pagination defaultCurrent={1} total={50} responsive={true} />
+    </Constain>
+  );
 };
 
 export default React.memo(PagiNation);
