@@ -19,6 +19,11 @@ const NavbarFont = styled.h6`
   position: static;
   height: 10px;
   padding: 7px;
+  &:hover{
+    background: linear-gradient(to right top, #000000, #BCFF66);
+    color: #BCFF66;
+    -webkit-background-clip: text;
+  }
 `
 
 const NavLink = styled.div`
