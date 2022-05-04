@@ -46,4 +46,9 @@ export const noticeData = [
   title: '2022/04/18__ver.8',
   text: '검색기능 개편 , footer 추가 , 각종 디자인 수정 , api 호출 개편 ',
  },
+ {
+  key: '10',
+  title: '2022/04/18__ver.9',
+  text: '시트 api 생성, 로딩 표기 기능, trackPromise 추가 ',
+ },
 ];
