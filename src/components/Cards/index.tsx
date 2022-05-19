@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Constain = styled.div`
+const Constain = styled.li`
     display: flex;
     justify-content: center;
 `
@@ -11,7 +11,7 @@ const Constain = styled.div`
 const Cards = () => {
     return (
         <Constain>
-            <Card style={{ width: '18rem', margin: '1em'}}>
+            <Card style={{ width: '18rem', margin: '1em', grid: '1px' }}>
                 <Card.Img variant="top" src="/Image/deadLift.jpg" />
                 <Card.Body>
                     <Card.Title>Weight training</Card.Title>
