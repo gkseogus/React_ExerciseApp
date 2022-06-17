@@ -6,6 +6,7 @@ import { ApplicationState } from '../../store';
 import { v4 as uuid_v4 } from 'uuid';
 import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
+import PagiNation from '../PagiNation';
 
 const ListConstain = styled.li`
   text-align: center;
@@ -27,6 +28,10 @@ const ProteinSearchForm = styled.div`
     top:50%;
     margin-left:-200px;
     margin-top:-150px;
+`
+const PagiNationConstain = styled.div`
+  display: flex;
+  justify-content: center;
 `
 
 const ProteinItems = () => {
@@ -76,6 +81,9 @@ const ProteinItems = () => {
             }
           </ExplainFont>
         </Figure.Caption>
+        <PagiNationConstain>
+          <PagiNation />
+        </PagiNationConstain>
       </Figure>
     </ListConstain>
   </div>
