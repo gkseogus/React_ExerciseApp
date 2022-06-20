@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import ProteinItems from '../ProteinItems';
 import Footer from '../Footer';
 import { Breadcrumb } from 'react-bootstrap';
-import PagiNation from '../PagiNation';
 import { useNavigate } from 'react-router-dom';
 
 const Constain = styled.div`
@@ -55,11 +54,6 @@ const BreadCrumbsContstain = styled.div`
   top: 60px;
 `
 
-const PagiNationConstain = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
 const BreadcrumbFont = styled.h6`
   background: linear-gradient(to right top, #000000, #94eb09);
   color: transparent;
@@ -94,9 +88,6 @@ const ProteinPage = (itme: any) => {
           </SecondFont>
         </FirstFont>
         <ProteinItems/>
-        <PagiNationConstain>
-          <PagiNation/>
-        </PagiNationConstain>
       </Constain>
       <Footer/>
     </div>
