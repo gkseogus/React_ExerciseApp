@@ -50,8 +50,8 @@ const NoticePage = () => {
     const navigate = useNavigate();
 
     const [ searchKeyWord, setSearchKeyWord ] = useState('');
-    const searchToData = () => {
-        
+    const searchToData = (e:any) => {
+        setSearchKeyWord(e.target.value);
     };
     
     return (
