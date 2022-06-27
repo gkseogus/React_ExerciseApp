@@ -50,9 +50,9 @@ const NoticePage = () => {
     const navigate = useNavigate();
 
     const [ searchKeyWord, setSearchKeyWord ] = useState('');
-    const searchToData = (e:any) => {
-        setSearchKeyWord(e.target.value);
-    };
+    const searchData =  noticeData.filter(
+        (i) => !searchKeyWord || i.text.includes(searchKeyWord)
+      );
     
     return (
         <div>
@@ -74,9 +74,9 @@ const NoticePage = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'md'}`} />
                     <Navbar.Offcanvas
-                    id={`offcanvasNavbar-expand-${'md'}`}
-                    aria-labelledby={`offcanvasNavbarLabel-expand-${'md'}`}
-                    placement="end"
+                        id={`offcanvasNavbar-expand-${'md'}`}
+                        aria-labelledby={`offcanvasNavbarLabel-expand-${'md'}`}
+                        placement="end"
                     >
                     <Offcanvas.Header closeButton>
                         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${'md'}`}>
@@ -93,7 +93,7 @@ const NoticePage = () => {
                             aria-label="Search"
                             onChange={(e) => setSearchKeyWord(e.target.value)}
                         />
-                        <Button variant="outline-success" onClick={searchToData}>Search</Button>
+                        <Button variant="outline-success" onClick={()=>{console.log('test')}}>Search</Button>
                         </Form>
                     </Offcanvas.Body>
                     </Navbar.Offcanvas>
@@ -101,7 +101,7 @@ const NoticePage = () => {
             </Navbar>
             <Collapse>
                 {
-                    noticeData.slice(0).reverse().map((data) => {
+                    searchData?.slice(0).reverse().map((data) => {
                         return(
                             <Panel header={data.title} key={data.key}>
                             <p>{data.text}</p>
