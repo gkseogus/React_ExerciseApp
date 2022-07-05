@@ -10,14 +10,16 @@ const Constain = styled.div`
 `
 
 const PagiNation = () => {
+  const pageNumbers = [];
 
   const rootData = useSelector(
     (state: ApplicationState) => state.inventory.data
   );
 
   const onChange = () => {
-    for(let i=0; i<rootData.length; i++){
-      return rootData[i]
+    for (let i = 0; i <= Math.ceil(rootData.length / 5); i++){
+      pageNumbers.push(i);
+      console.log(pageNumbers.push(i))
     }
   }
 
