@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import Navbar from './components/NavBar';
+import NavBar from './components/NavBar';
 import NoticePage from './components/NoticePage';
 import ProteinPage from './components/ProteinPage';
 import RoutinePage from './components/RoutinePage';
@@ -13,7 +13,7 @@ const RoutesApp = () => (
       path='/'
       element={
         <div>
-          <Navbar/>
+          <NavBar/>
           <HomePage/>
         </div>
       }
@@ -22,7 +22,7 @@ const RoutesApp = () => (
       path='/weight'
       element={
         <div>
-          <Navbar/>
+          <NavBar/>
           <WeightPage/>
         </div>
       }
@@ -31,7 +31,7 @@ const RoutesApp = () => (
       path='/routine'
       element={
         <div>
-          <Navbar/>
+          <NavBar/>
           <RoutinePage/>
         </div>
       }
@@ -40,7 +40,7 @@ const RoutesApp = () => (
       path='/protein'
       element={
         <div>
-          <Navbar/>
+          <NavBar/>
           <ProteinPage/>
         </div>
       }
@@ -49,7 +49,7 @@ const RoutesApp = () => (
       path='/notice'
       element={
         <div>
-          <Navbar/>
+          <NavBar/>
           <NoticePage/>
         </div>
       }
