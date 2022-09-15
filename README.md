@@ -22,7 +22,9 @@
 
 # Data
 -컬럼 종류-
+
 name, price, flatness, brand, image
+
 ![protein data](https://user-images.githubusercontent.com/76561461/190295796-1a11fab4-5f93-4717-8030-69c6fae39147.PNG)
 
 # Web Deployment
